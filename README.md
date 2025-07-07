@@ -43,3 +43,16 @@ If you want to help support this mod, you can do so by translating it into other
 
 Please do not DM me for feature requests - If you are asking about contributing or bugs, feel free to.
 
+## Contributions
+
+For whatever reason, GitHub does not show contributors correctly, so to ensure they all get proper credit, here's a list of everyone who has contributed and what they have done!
+
+If there's anything you'd like to do, feel free to make a pull request!
+
+- dreamy1nbythehill (German translations, pride month button icons)
+- JustAPotota (Emotional support)
+- Amirhan-Taipovjan-Greatest-I (Tatar translations)
+- Alex Gazmanovich (Belarusian translations)
+- NightMite (Polish translations)
+- Niorgamer (Portuguese translations)
+- Dushniyy (Russian translations)
