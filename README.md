@@ -4,28 +4,6 @@ This is a small, vanilla-styled mod that lets you write notes in-game.
 
 It uses a similar GUI as a traditional book, but it's completely client-side and global - It will persist across worlds and servers.
 
-### Important notice for people updating the mod
-
-I try and avoid breaking changes, alas, the way I stored books previously was bad and changing it requires some user intervention.
-
-Versions older than v4.0.0 will be incompatible with newer versions, your notebooks will be reset otherwise.
-
-Updating them is simple, head into `.minecraft/Notebook` and you will see folders, each containing files with the contents of each page (Who thought this was a good way to store them.... oh wait, that was me. oh the regrets.)
-
-Now, create a file `[bookname].json` for each book, replacing `[bookname]` with whatever you want the book to be called.
-In the file, copy the below, replacing `default.json` with whatever you named the file;
-
-```json
-{
-  "content" : ["page 1 content","page 2 content"],
-  "location" : "default.json"
-}
-```
-
-Now, in `content`, you can add comma separated values, surrounded by `""`, containing the text for each page, replacing `"page 1 content"` and `"page 2 content"`.
-
-After that, you can reload the game and they should appear. 
-
 ## FAQ
 
 > What versions?
@@ -34,9 +12,9 @@ I try and keep it on the latest version, but if people stick to specific version
 
 > Forge/Fabric?
 
-The mod should work on fabric and quilt already. However, forge is probably not going to get an official port.
+The mod should work on Forge, Fabric and Quilt!
 
-If you want to port it to forge yourself, you're more than welcome to - I will accept PRs and add branches to support forge if someone wants to maintain them.
+As of writing, the mod is designed for Fabric, but has experimental support for Forge via Connector! As for quilt, it's supported due to their ability to keep compatibility with Fabric, but I don't keep up to date nor test it; so it's purely on a speculative basis. I will fix Quilt-specific issues, it's just a low priority.
 
 > Can I use this in my modpack?
 
@@ -51,7 +29,7 @@ Curseforge is the least priority, so I would recommend checking here or Modrinth
 Go to the releases tab to see it here, or go to a different site;
 
 - Modrinth: https://modrinth.com/mod/notebook
-- Curseforge: https://www.curseforge.com/minecraft/mc-mods/notebook
+- Curseforge: https://www.curseforge.com/minecraft/mc-mods/notebook (Outdated, no access to my CurseForge account currently)
 - Forgejo: https://git.sillyjune.xyz/juniper/Minecraft-Vanilla-Notebook
 - Github: https://github.com/JunePrimavera/Minecraft-Vanilla-Notebook
 
