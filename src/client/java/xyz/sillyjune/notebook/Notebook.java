@@ -60,7 +60,7 @@ public class Notebook implements ModInitializer {
                 LOGGER.error("failed to create " + BOOK_FOLDER);
             }
         }
-        if (CONFIG.debug()) { LOGGER.error("June is very silly. Continue with extreme caution."); }
+        if (CONFIG.debug()) { LOGGER.error("Juniper is very silly. Continue with extreme caution."); }
         Calendar cal = Calendar.getInstance();
         cal.setTime(new Date());
         if (cal.get(Calendar.MONTH) != Calendar.JUNE) { GAY = false; } // Gay unless proven straight.
