@@ -30,7 +30,7 @@ Go to the releases tab to see it here, or go to a different site;
 
 - Modrinth: https://modrinth.com/mod/notebook
 - Curseforge: https://www.curseforge.com/minecraft/mc-mods/notebook (Outdated, no access to my CurseForge account currently)
-- Forgejo: https://git.sillyjune.xyz/juniper/Minecraft-Vanilla-Notebook
+- Forgejo: https://forgejo.sillyjune.xyz/juniper/Minecraft-Vanilla-Notebook
 - Github: https://github.com/JunePrimavera/Minecraft-Vanilla-Notebook
 
 > I found a bug! / I want to suggest features!
