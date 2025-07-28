@@ -1,47 +1,29 @@
-# Minecraft Vanilla Notebook
+![Title text - It says "Notebook" with a spruce plank esque texture, with a notebook icon off to the right.](https://cdn.modrinth.com/data/cached_images/af7d924628408f5a9443c71a13e8ce419a4f24e5.png)
 
-This is a small, vanilla-styled mod that lets you write notes in-game.
+## About
 
-It uses a similar GUI as a traditional book, but it's completely client-side and global - It will persist across worlds and servers.
+This is a small, vanilla-styled mod that adds a notebook to your GUI. You can use it to note down coordinates, or write notes.
 
-## FAQ
+It is simply just a book in your menus - with a couple added features.
+This mod is **client side**; you do not need to install this on the server to use it - It is usable anywhere.
 
-> What versions?
+![Screenshot of the book in-game](https://cdn.modrinth.com/data/cached_images/332fc2a9a0979ca595db43cf25118d37e8e38b2a.png)
 
-I try and keep it on the latest version, but if people stick to specific versions I will support those for longer, until something else becomes more relevant. Versions older than 1.20.5 may not be supported for very long, as some changes in Java 21 are very useful.
+## Links
 
-> Forge/Fabric?
+[Bug reports](https://github.com/JunePrimavera/Minecraft-Vanilla-Notebook/issues)
 
-The mod should work on Forge, Fabric and Quilt!
+[Discord server](https://discord.gg/yRzU94bWVg)
 
-As of writing, the mod is designed for Fabric, but has experimental support for Forge via Connector! As for quilt, it's supported due to their ability to keep compatibility with Fabric, but I don't keep up to date nor test it; so it's purely on a speculative basis. I will fix Quilt-specific issues, it's just a low priority.
+## Other info
 
-> Can I use this in my modpack?
+The only official place to download this mod is here (modrinth) and [GitHub](https://github.com/JunePrimavera) 
 
-Yes, you can use it in your modpack. Preferably, with credit.
+You may use this mod in your own modpacks; with credit preferably, but not required (It'd also be awesome to see the modpacks you create! Feel free to send them to me).
 
-> Where do I download it?
+If you want to suggest any features - or report bugs, check the [issues page](https://github.com/JunePrimavera/Vanilla-Notebook/issues) or you can come chat with me and other community members on my [discord server](https://discord.gg/yRzU94bWVg)
 
-It's downloadable on GitHub, my Forgejo instance Modrinth and Curseforge. 
-
-Curseforge is the least priority, so I would recommend checking here or Modrinth first.
-
-Go to the releases tab to see it here, or go to a different site;
-
-- Modrinth: https://modrinth.com/mod/notebook
-- Curseforge: https://www.curseforge.com/minecraft/mc-mods/notebook
-- Forgejo: https://forgejo.sillyjune.xyz/juniper/Minecraft-Vanilla-Notebook
-- Github: https://github.com/JunePrimavera/Minecraft-Vanilla-Notebook
-
-> I found a bug! / I want to suggest features!
-
-If you find bugs or issues with the mod, you can make an issue [on GitHub](https://github.com/JunePrimavera/Minecraft-Vanilla-Notebook) or [my forgejo instance](https://forgejo.sillyjune.xyz/juniper/Minecraft-Vanilla-Notebook/issues).
-
-Alternatively, you can [join my discord](https://discord.gg/mcAU97xGQs) if you have any questions, need help, or want to talk to me directly.
-
-If you want to help support this mod, you can do so by translating it into other languages, improving textures. If you want to add textures/translations (and don't want/know how to use GitHub's PRs), contact me on discord.
-
-Please do not DM me for feature requests - If you are asking about contributing or bugs, feel free to.
+[Consider donating](https://ko-fi.com/sillyjune) on KoFi if you like what I do and want to support me!
 
 ## Contributions
 
