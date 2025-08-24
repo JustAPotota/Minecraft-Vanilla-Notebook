@@ -26,6 +26,6 @@ public abstract class GameMenuScreenButton extends Screen {
             //Code is run when the button is clicked
             assert this.client != null;
             this.client.setScreen(new NotebookScreen());
-        }, Text.translatable("jwg.button.bookmenu")));
+        }));
     }
 }

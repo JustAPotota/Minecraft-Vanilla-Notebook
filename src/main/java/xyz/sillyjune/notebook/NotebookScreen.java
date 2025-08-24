@@ -151,11 +151,11 @@ public class NotebookScreen extends Screen {
         this.bookNameField.setEditable(true);
         this.bookNameField.setText("default");
 
-        buttonIncreaseOffset = this.addDrawableChild(new TexturedButtonWidget(115, 155, 12, 12, 0, 0, 0, new Identifier("notebook:textures/gui/sprites/last_book/unfocused.png"), 12, 12, (button) -> {
+        buttonIncreaseOffset = this.addDrawableChild(new TexturedButtonWidget(115, 155, 24, 24, 0, 0, 0, new Identifier("notebook:textures/gui/sprites/last_book/unfocused.png"), 12, 12, (button) -> {
             bookOffset += 1; // TODO prevent the player from spamming this button to shoot the offset to the moon :rocket:
             initBookSwitching();
         }));
-        buttonDecreaseOffset = this.addDrawableChild(new TexturedButtonWidget(115, 130, 12, 12, 0, 0, 0, new Identifier("notebook:textures/gui/sprites/next_book/unfocused.png"), 12, 12, (button) -> {
+        buttonDecreaseOffset = this.addDrawableChild(new TexturedButtonWidget(115, 130, 24, 24, 0, 0, 0, new Identifier("notebook:textures/gui/sprites/next_book/unfocused.png"), 12, 12, (button) -> {
             if (bookOffset > 0) {
                 bookOffset -= 1;
                 initBookSwitching();
