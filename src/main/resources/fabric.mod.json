@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "notebook",
-  "version": "4.1.0",
+  "version": "4.1.1",
   "name": "Notebook",
   "description": "Keep track of everything!",
   "authors": [
