@@ -144,24 +144,24 @@ public class NotebookScreen extends Screen {
         int i = (this.width - 192) / 2;
         this.nextPageButton = this.addDrawableChild(new PageTurnWidget(i + 116, 159, true, (button) -> this.goToNextPage(), this.pageTurnSound));
         this.previousPageButton = this.addDrawableChild(new PageTurnWidget(i + 43, 159, false, (button) -> this.goToPreviousPage(), this.pageTurnSound));
-        this.newPageButton = this.addDrawableChild(new TexturedButtonWidget(i + 119, 155, 20, 20, 0, 0, 20, new Identifier("notebook:textures/gui/new_page/unfocused.png"), 32, 64, (button) -> newPage()));
-        this.delPageButton = this.addDrawableChild(new TexturedButtonWidget(i + 99, 155, 20, 20, 0, 0, 20, new Identifier("notebook:textures/gui/delete_page/unfocused.png"), 32, 64, (button) -> delPage()));
+        this.newPageButton = this.addDrawableChild(new TexturedButtonWidget(i + 119, 155, 20, 20, 0, 0, 0, new Identifier("notebook:textures/gui/sprites/new_page/unfocused.png"), 20, 20, (button) -> newPage()));
+        this.delPageButton = this.addDrawableChild(new TexturedButtonWidget(i + 99, 155, 20, 20, 0, 0, 0, new Identifier("notebook:textures/gui/sprites/delete_page/unfocused.png"), 20, 20, (button) -> delPage()));
         // Top bar buttons
         this.bookNameField = this.addDrawableChild(new TextFieldWidget(this.textRenderer, 5, 5, 108, 20, Text.translatable("notebook.text.field")));
         this.bookNameField.setEditable(true);
         this.bookNameField.setText("default");
 
-        buttonIncreaseOffset = this.addDrawableChild(new TexturedButtonWidget(113, 155, 20, 20, 0, 0, new Identifier("notebook:textures/gui/last_book/unfocused.png"), (button) -> {
-            bookOffset += 1;
+        buttonIncreaseOffset = this.addDrawableChild(new TexturedButtonWidget(115, 155, 12, 12, 0, 0, 0, new Identifier("notebook:textures/gui/sprites/last_book/unfocused.png"), 12, 12, (button) -> {
+            bookOffset += 1; // TODO prevent the player from spamming this button to shoot the offset to the moon :rocket:
             initBookSwitching();
         }));
-        buttonDecreaseOffset = this.addDrawableChild(new TexturedButtonWidget(115, 130, 20, 20, 0, 0, new Identifier("notebook:textures/gui/sprites/next_book/unfocused.png"), (button) -> {
+        buttonDecreaseOffset = this.addDrawableChild(new TexturedButtonWidget(115, 130, 12, 12, 0, 0, 0, new Identifier("notebook:textures/gui/sprites/next_book/unfocused.png"), 12, 12, (button) -> {
             if (bookOffset > 0) {
                 bookOffset -= 1;
                 initBookSwitching();
             }
         }));
-        buttonDelBook = this.addDrawableChild(new TexturedButtonWidget(55, 30, 20, 20, 0, 0, new Identifier("notebook:textures/gui/sprites/delete_book/unfocused.png"), (button) -> {
+        buttonDelBook = this.addDrawableChild(new TexturedButtonWidget(55, 30, 16, 16, 0, 0, 0, new Identifier("notebook:textures/gui/sprites/delete_book/unfocused.png"), 16, 16, (button) -> {
             String[] books = Objects.requireNonNull(new File(BOOK_FOLDER).list());
             boolean found = false;
             for (String iter : books) {
@@ -182,7 +182,7 @@ public class NotebookScreen extends Screen {
             initBookSwitching();
         }
         ));
-        buttonNewBook = this.addDrawableChild(new TexturedButtonWidget(5, 30, 20, 20, 0, 0, new Identifier("notebook:textures/gui/sprites/new_book/unfocused.png"), (button) -> {
+        buttonNewBook = this.addDrawableChild(new TexturedButtonWidget(5, 30, 16, 16, 0, 0, 0, new Identifier("notebook:textures/gui/sprites/new_book/unfocused.png"), 16, 16, (button) -> {
             String[] books = Objects.requireNonNull(new File(BOOK_FOLDER).list());
             boolean found = false;
             for (String iter : books) {
@@ -198,7 +198,7 @@ public class NotebookScreen extends Screen {
             initBookSwitching();
         }
         ));
-        buttonRenameBook = this.addDrawableChild(new TexturedButtonWidget(30, 30, 20, 20, 0, 0, new Identifier("notebook:textures/gui/sprites/rename_book/unfocused.png"), (button) -> {
+        buttonRenameBook = this.addDrawableChild(new TexturedButtonWidget(30, 30, 16, 16, 0, 0, 0, new Identifier("notebook:textures/gui/sprites/rename_book/unfocused.png"), 16, 16, (button) -> {
             String[] books = Objects.requireNonNull(new File(BOOK_FOLDER).list());
             boolean found = false;
             for (String iter : books) {
@@ -294,6 +294,14 @@ public class NotebookScreen extends Screen {
         }
         return false;
     }
+
+    // Render book background
+    @Override
+    public void renderBackground(DrawContext context) {
+        super.renderBackground(context);
+        context.drawTexture(BookScreen.BOOK_TEXTURE, (this.width - 192) / 2, 2, 0.0F, 0.0F, 192, 192, 256, 256);
+    }
+
     // The code I am going to avoid like the plague
     public void render(DrawContext context, int mouseX, int mouseY, float delta) {
         this.renderBackground(context);
@@ -307,8 +315,6 @@ public class NotebookScreen extends Screen {
             // Render cursor and book content
             this.cachedPage = this.textRenderer.wrapLines(StringVisitable.plain(pageContent), 114);
         }
-        // Render book background
-        context.drawTexture(BookScreen.BOOK_TEXTURE, (this.width - 192) / 2, 2, 0.0F, 0.0F, 192, 192, 256, 256);
 
         for(int m = 0; m < Math.min(128 / 9, this.cachedPage.size()); ++m) {
             context.drawText(this.textRenderer, this.cachedPage.get(m), ((this.width - 192) / 2) + 36, 32 + m * 9, Colors.BLACK, false);
