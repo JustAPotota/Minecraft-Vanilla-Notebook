@@ -1,6 +1,5 @@
 package xyz.sillyjune.notebook.mixin;
 
-import net.minecraft.client.gui.screen.GameMenuScreen;
 import net.minecraft.client.gui.screen.Screen;
 import net.minecraft.client.gui.screen.TitleScreen;
 import net.minecraft.client.gui.widget.TexturedButtonWidget;
@@ -24,10 +23,13 @@ public abstract class TitleScreenButton extends Screen {
                 this.width / 2 + 104,
                 this.height / 4 + 96,
                 20,
-                40,
+                20,
                 0,
                 0,
+                20,
                 BOOK_TEXTURE,
+                20,
+                40,
                 (button) -> this.client.setScreen(new NotebookScreen())
         );
         b.setMessage(Text.translatable("key.notebook.open"));
