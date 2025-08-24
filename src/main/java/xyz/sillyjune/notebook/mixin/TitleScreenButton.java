@@ -11,7 +11,7 @@ import org.spongepowered.asm.mixin.injection.Inject;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import xyz.sillyjune.notebook.NotebookScreen;
 
-import static xyz.sillyjune.notebook.Notebook.getBookIcon;
+import static xyz.sillyjune.notebook.Notebook.BOOK_TEXTURE;
 
 @Mixin(TitleScreen.class)
 public abstract class TitleScreenButton extends Screen {
@@ -25,7 +25,9 @@ public abstract class TitleScreenButton extends Screen {
                 this.height / 4 + 96,
                 20,
                 20,
-                getBookIcon(),
+                0,
+                0,
+                BOOK_TEXTURE,
                 (button) -> this.client.setScreen(new NotebookScreen())
         );
         b.setMessage(Text.translatable("key.notebook.open"));

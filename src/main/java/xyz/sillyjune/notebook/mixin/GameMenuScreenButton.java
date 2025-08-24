@@ -25,7 +25,9 @@ public abstract class GameMenuScreenButton extends Screen {
                 this.height / 4 + 96 + -16,
                 20,
                 20,
-                getBookIcon(),
+                0,
+                0,
+                BOOK_TEXTURE,
                 (button) -> this.client.setScreen(new NotebookScreen())
         );
         b.setMessage(Text.translatable("key.notebook.open"));

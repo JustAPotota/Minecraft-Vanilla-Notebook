@@ -25,12 +25,6 @@ import java.util.Date;
 @Environment(EnvType.CLIENT)
 public class Notebook implements ModInitializer {
     private static KeyBinding openBookKeybind;
-    public static ButtonTextures b_id(String id) {
-        return new ButtonTextures( // For whatever reason, you can't specify .png at the end of these. I have questions for mojang.
-                Identifier.of("notebook", id + "/unfocused"),
-                Identifier.of("notebook", id + "/focused")
-        );
-    }
 
     @Override
     public void onInitialize() {
@@ -74,25 +68,9 @@ public class Notebook implements ModInitializer {
         });
 
     }
-    public static ButtonTextures getBookIcon() {
-        if (!GAY){
-            return MAIN_BUTTON_ICON;
-        } else {
-            return MAIN_BUTTON_ICON_GAY;
-        }
-    }
     public static final Logger LOGGER = LoggerFactory.getLogger("notebook");
-    public static final ButtonTextures MAIN_BUTTON_ICON_GAY = b_id("book_gay");
-    public static final ButtonTextures DEL_BOOK_ICON = b_id("delete_book");
-    public static final ButtonTextures MAIN_BUTTON_ICON = b_id("book");
-    public static final ButtonTextures NEW_PAGE_ICON = b_id("new_page");
-    public static final ButtonTextures DEL_PAGE_ICON = b_id("delete_page");
-    public static final ButtonTextures LAST_BOOK_ICON = b_id("last_book");
-    public static final ButtonTextures NEW_BOOK_ICON = b_id("new_book");
-    public static final ButtonTextures NEXT_BOOK_ICON = b_id("next_book");
-    public static final ButtonTextures RENAME_BOOK_ICON = b_id("rename_book");
     public static NotebookConfig CONFIG;
-    public static final Identifier BOOK_TEXTURE = Identifier.of("textures/gui/book.png");
+    public static final Identifier BOOK_TEXTURE = new Identifier("notebook:textures/gui/sprites/book/unfocused.png");
     public static String BOOK_FOLDER = "Notebook";
     public static final String VERSION = "4.1.0";
     public static boolean GAY = true; // I might be straight but gay people are pretty cool
