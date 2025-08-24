@@ -24,7 +24,7 @@ public abstract class TitleScreenButton extends Screen {
                 this.width / 2 + 104,
                 this.height / 4 + 96,
                 20,
-                20,
+                40,
                 0,
                 0,
                 BOOK_TEXTURE,
