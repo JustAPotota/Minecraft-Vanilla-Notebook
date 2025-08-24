@@ -296,7 +296,7 @@ public class NotebookScreen extends Screen {
     }
     // The code I am going to avoid like the plague
     public void render(DrawContext context, int mouseX, int mouseY, float deltaTicks) {
-        super.render(context, mouseX, mouseY, deltaTicks);
+
         if (DATA.content.length > this.pageIndex) {
             String pageContent = readPage(pageIndex);
             // Cursor timing
@@ -308,6 +308,7 @@ public class NotebookScreen extends Screen {
         }
         // Render book background
         context.drawTexture(RenderPipelines.GUI_TEXTURED, BOOK_TEXTURE, (this.width - 192) / 2, 2, 0.0F, 0.0F, 192, 192, 256, 256);
+        super.render(context, mouseX, mouseY, deltaTicks);
 
         for(int m = 0; m < Math.min(128 / 9, this.cachedPage.size()); ++m) {
             context.drawText(this.textRenderer, this.cachedPage.get(m), ((this.width - 192) / 2) + 36, 32 + m * 9, Colors.BLACK, false);
